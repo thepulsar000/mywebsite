@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background-color: hsl(55, 30%, 11%);
+    /* min-height: 100vh; */
+    position: relative;
+}
+
+.header{
+    position: relative;
+    /* border: 2px solid pink; */
+}
+.header::before{
+    content: "";
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-left: 250px solid hsl(130, 33%, 56%);
+    border-right: 250px solid hsl(130, 33%, 56%);
+    position: absolute;
+}
+
+.nav{
+    width: 100%;
+    /* border: 2px solid pink; */
+    color: hsl(0, 0%, 96%);
+    font-family: Ubuntu;
+    display: flex;
+    justify-content: end;
+    gap: 20px;
+    padding: 1em 2em 0 0;
+}
+.nav button{
+    background-color: transparent;
+    border: none;
+    color: whitesmoke
+}
+.wrap{
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid white; */
+}
+
+.intro{
+    font-family: Ubuntu, serif;
+    width: 80%;
+    margin: 6em 0 0 0;
+    padding-left: 3em;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+.intro button{
+    width: 100px;
+    padding: 0.5em 1em;
+    background-color: hsl(60, 100%, 50%);
+    border: transparent;
+    transition: all 1s ease-in-out;
+}
+.intro button:hover{
+    background-color: hsl(130, 33%, 56%);
+}
+.hello{
+    color: hsl(0, 0%, 96%);
+    font-size: 38px;
+    font-weight: 900;
+}
+.hello span{
+    color: hsl(60, 100%, 50%);
+}
+.about{
+    width: 40%;
+    font-weight: 300;
+    /* border: 2px solid red; */
+    color: hsl(130, 33%, 86%);
+}
+
+
+
+@media (max-width: 900px){
+    .hello{
+        /* border: 2px solid white; */
+        width: 50%;
+        padding: 0 0 0 4em;
+    }
+    .intro{
+        flex-direction: column;
+        padding-left: 1em;
+        width: 100%;
+        gap: 30px;
+        /* border: 2px solid red; */
+    }
+    .about{
+        text-align: left;
+        /* border: 2px solid pink; */
+    }
+}
+
+.project{
+    /* min-height: 70vh; */
+    /* border: 2px solid pink; */
+    margin: 6em 0 0 0;
+    /* padding: 0 0 0 5em; */
+}
+
+.wrap2{
+    display: flex;
+    justify-content: end;
+    /* border: 2px solid red; */
+}
+.headingP{
+    color: hsl(0, 0%, 96%);
+    border-bottom: 1px solid hsl(130, 33%, 56%);
+    padding-right: 6em;
+    font-size: 38px;
+    font-weight: 900;
+    position: relative;
+}
+.headingP::after{
+    content: "";
+    background-color: hsl(60, 100%, 50%);
+    position: absolute;
+    width: 7px;
+    height: 9px;
+    top: 27px;
+}
+.boxes{
+    padding: 3em 0 2em 0;
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid red; */
+}
+.box_wrap{
+   /* border: 2px solid pink; */
+   width: 40%;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.box{
+    width: min(70%, 350px);
+    height: 30vh;
+    border-radius: 2px;
+}
+.one{
+    background-image: url(./images/sunnyside.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.one::before{
+    content: "";
+    width: 120px;
+    height: 20px;
+    background-color: hsla(0, 0%, 96%, 0.4);
+    position: absolute;
+    top: 10px;
+    right: -30px;
+}
+
+.two{
+    background-image: url(./images/fashion.png);
+    background-repeat: no-repeat;
+    background-position-x: 10%;
+    background-size: cover;
+    position: relative;
+}
+.two::before{
+    content: "";
+    width: 20px;
+    height: 120px;
+    background-color: hsla(0, 0%, 96%, 0.4);
+    position: absolute;
+    top: -30px;
+    right: 10px;
+}
+
+.three{
+    background-image: url(./images/together.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.three::before{
+    content: "";
+    width: 120px;
+    height: 20px;
+    background-color: hsla(0, 0%, 96%, 0.4);
+    position: absolute;
+    top: 10px;
+    right: -30px;
+}
+
+a{
+    color: hsl(0, 0%, 96%);
+    font-family: Ubuntu;
+    text-decoration: none;
+}
+a:visited{
+    color: hsl(130, 33%, 76%);
+}
+a:hover{
+    color: hsl(60, 100%, 50%);
+}
+a:active{
+    color: hsl(130, 33%, 56%);
+}
+
+
+@media (max-width: 900px){
+    .projectP{
+        padding-right: 3em;
+    }
+    
+}
+
+.skills{
+    /* border: 2px solid red; */
+    padding: 0 0 2em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill_wrap{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: end;
+    padding-right: 3em; 
+}
+.skill{
+    width: 200px;
+    height: 200px;
+    color:hsl(130, 33%, 76%);
+    border-top: 1px solid hsl(130, 33%, 76%);
+    border-right: 1px solid hsl(130, 33%, 76%);
+    border-bottom: 1px solid hsl(130, 33%, 76%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.experience{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0 0 2em 0;
+}
+
+
+.wrap3{
+    display: flex;
+    justify-content: start;
+}
+.exp_wrap{
+    padding-left: 3em;
+}
+.exp{
+    width: 300px;
+    height: 150px;
+    border-top: 1px solid hsl(130, 33%, 76%);
+    border-left: 1px solid hsl(130, 33%, 76%);
+    border-bottom: 1px solid hsl(130, 33%, 76%);
+    color:hsl(130, 33%, 76%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pictures{
+    padding: 0 0 2em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.picture{
+    width: 300px;
+    height: 300px;
+    border-radius: 3px;
+    border-top: 1px solid hsl(130, 33%, 76%);
+    border-right: 1px solid hsl(130, 33%, 76%);
+    border-bottom: 1px solid hsl(130, 33%, 76%);
+    background-image: url(./images/smile2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    animation: pic 30s ease-in-out infinite forwards;
+}
+@keyframes pic{
+    0%{
+        background-image: url(./images/smile2.jpg);
+    }
+    25%{
+        background-image: url(./images/grad.jpg);
+    }
+    50%{
+        background-image: url(./images/grad2.jpg);
+    }
+    75%{
+        background-image: url(./images/outing.JPG);
+    }
+    100%{
+        background-image: url(./images/me.jpeg);
+    }
+}
